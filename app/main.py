@@ -7,9 +7,15 @@ from .extractor import scrape_propostas
 from .excel import gerar_excel
 from .logger import info, error
 
+BASE_DIR = Path(__file__).resolve().parent
+
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount(
+    "/static",
+    StaticFiles(directory=BASE_DIR / "static"),
+    name="static"
+)
 
 
 @app.get("/")
