@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Request, Form
-from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.responses import FileResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 import uuid, os
 from .extractor import scrape_propostas
 from .excel import gerar_excel
@@ -10,7 +11,7 @@ from .logger import info, error
 BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 app.mount(
     "/static",
     StaticFiles(directory=BASE_DIR / "static"),
