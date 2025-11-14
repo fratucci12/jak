@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: jak-playwright
+    env: docker
+    repo: https://github.com/your_user/your_repo
+    branch: main
+    plan: free
+    autoDeploy: true

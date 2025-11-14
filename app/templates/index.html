@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>JAK - Extrator de Propostas</title>
+    <style>
+        body{font-family: Arial; max-width:800px;margin:40px auto;padding:0 20px;}
+        input, button {padding:10px; font-size:16px;}
+        input{width:100%; box-sizing:border-box;}
+        button{margin-top:10px;background:#007bff;color:#fff;border:none;padding:10px 16px;border-radius:4px;cursor:pointer;}
+    </style>
+</head>
+<body>
+    <h1>JAK — Extrator de Propostas</h1>
+    <p>Cole o link do item do ComprasNet e clique em <strong>Extrair</strong>.</p>
+
+    <form action="/processar" method="post">
+        <label>Link do item</label><br/>
+        <input type="text" name="url" placeholder="https://.../item/1?compra=..." required/>
+        <br/>
+        <button type="submit">Extrair e baixar Excel</button>
+    </form>
+</body>
+</html>
