@@ -2,7 +2,7 @@ services:
   - type: web
     name: jak-playwright
     env: docker
-    repo: https://github.com/your_user/your_repo
+    repo: https://github.com/fratucci12/jak
     branch: main
     plan: free
     autoDeploy: true
