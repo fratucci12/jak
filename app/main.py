@@ -4,8 +4,8 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import uuid, os
 from .extractor import scrape_propostas
-from excel import gerar_excel
-from logger import info, error
+from .excel import gerar_excel
+from .logger import info, error
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
