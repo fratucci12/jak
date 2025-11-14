@@ -1,6 +1,6 @@
 from openpyxl import Workbook
 from typing import List, Dict
-from logger import info, error
+from .logger import info, error
 import os
 
 def gerar_excel(data: List[Dict], filename: str) -> str:
