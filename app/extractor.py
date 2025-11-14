@@ -1,63 +1,99 @@
-import asyncio, json
-from playwright.async_api import async_playwright
-from .logger import info, error
+import json
+import time
+import uuid
+from seleniumbase import Driver
 
-STEALTH_JS = """
-Object.defineProperty(navigator, 'webdriver', {get: () => false});
-Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3]});
-Object.defineProperty(navigator, 'languages', {get: () => ['pt-BR', 'pt']});
-window.chrome = { runtime: {} };
-"""
 
-async def scrape_propostas(url: str):
-    info("Iniciando Playwright", url=url)
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=['--no-sandbox'])
-        context = await browser.new_context(user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/117', locale='pt-BR')
-        page = await context.new_page()
-        await page.add_init_script(STEALTH_JS)
+def log(level, message, **extra):
+    event = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        "level": level,
+        "message": message,
+        "event_id": str(uuid.uuid4()),
+    }
+    event.update(extra)
+    print(json.dumps(event, ensure_ascii=False))
 
-        loop = asyncio.get_event_loop()
-        future = loop.create_future()
 
-        async def on_response(response):
-            try:
-                if '/propostas' in response.url and response.status == 200:
-                    if not future.done():
-                        future.set_result(response)
-                        info("API /propostas detectada", url=response.url)
-            except Exception as e:
-                error("Erro no on_response", exception=str(e))
+def extrair_dados(url: str):
+    log("INFO", "Iniciando Chrome + CDP", url=url)
 
-        page.on('response', on_response)
+    # === INICIAR CHROME COM CDP ATIVADO ===
+    driver = Driver(
+        browser="chrome",
+        headless=True,
+        undetected=True,
+        agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    )
 
-        await page.goto(url, wait_until='domcontentloaded')
-        info("Página carregada (domcontentloaded), aguardando /propostas...")
+    driver.open(url)
 
+    # ATIVAR LISTEN DE REDE ANTES DE CARREGAR
+    driver.execute_cdp_cmd("Network.enable", {})
+
+    captured = []
+
+    def capturar(request):
         try:
-            response = await asyncio.wait_for(future, timeout=60)
-        except asyncio.TimeoutError:
-            error("Timeout esperando /propostas")
-            await browser.close()
-            return None
+            req_url = request.get("request", {}).get("url", "")
+            if "comprasnet-web" in req_url:
+                captured.append(request)
+        except Exception:
+            pass
 
-        # garante corpo completo e lê como texto
-        try:
-            body = await response.text()
-        except Exception as e:
-            error("Erro ao ler body", exception=str(e))
-            body = None
+    driver.add_cdp_listener("Network.requestWillBeSent", capturar)
 
-        await browser.close()
+    log("INFO", "Aguardando chamadas de API")
 
-        if not body:
-            error("Body vazio")
-            return None
+    # Esperar requisições aparecerem
+    time.sleep(7)
 
-        try:
-            data = json.loads(body)
-            info("JSON decodificado", items=len(data) if isinstance(data, list) else 1)
-            return data
-        except Exception as e:
-            error("Falha ao parsear JSON", exception=str(e))
-            return None
+    if not captured:
+        log("ERROR", "Nenhuma requisição capturada! Verifique se a página carregou totalmente")
+        driver.quit()
+        return None
+
+    # === TENTAR IDENTIFICAR O ENDPOINT CERTO ===
+    candidatos = [
+        "propostas",
+        "melhor-proposta",
+        "lances",
+        "melhorLance",
+        "melhorOferta",
+        "cotacoes",
+    ]
+
+    alvo = None
+    for req in captured:
+        url_req = req.get("request", {}).get("url", "")
+        if any(c in url_req.lower() for c in candidatos):
+            alvo = req
+            break
+
+    if not alvo:
+        # DEBUG: Exibir todas as URLs encontradas
+        for req in captured:
+            log("INFO", "REQ DEBUG", url=req.get("request", {}).get("url", ""))
+
+        log("ERROR", "Nenhuma rota de propostas foi encontrada")
+        driver.quit()
+        return None
+
+    log("INFO", "Rota encontrada", rota=alvo["request"]["url"])
+
+    # === OBTER RESPONSE PELO ID ===
+    req_id = alvo["requestId"]
+
+    try:
+        resp = driver.execute_cdp_cmd("Network.getResponseBody", {"requestId": req_id})
+        body = resp.get("body", "")
+        data = json.loads(body)
+
+    except Exception as e:
+        log("ERROR", "Falha ao ler o corpo da resposta", error=str(e))
+        driver.quit()
+        return None
+
+    driver.quit()
+    return data

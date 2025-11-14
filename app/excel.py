@@ -1,33 +1,53 @@
-from openpyxl import Workbook
-from typing import List, Dict
-from .logger import info, error
-import os
+def gerar_excel(propostas, filename):
+    from loguru import logger as log
+    import os
+    import openpyxl
 
-def gerar_excel(data: List[Dict], filename: str) -> str:
-    '''
-    Recebe lista de propostas (list of dicts) e gera um xlsx com colunas:
-    fornecedor, valor_unitario, marca, modelo
-    '''
-    wb = Workbook()
+    log.info(f"Início da geração do Excel. Recebido tipo: {type(propostas)}, quantidade: {len(propostas)}")
+
+    wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Propostas"
-    ws.append(["fornecedor", "valor_unitario", "marca", "modelo"])
 
-    def lookup(d, keys):
-        for k in keys:
-            if k in d:
-                return d.get(k)
-        return None
+    ws.append(["Fornecedor", "Valor", "Marca", "Modelo"])
 
-    for p in data if isinstance(data, list) else [data]:
-        fornecedor = lookup(p, ["fornecedor", "razaoSocial", "proponente", "nome"])
-        valor = lookup(p, ["valorUnitario", "valor_unitario", "valor", "valorUnitario"])
-        marca = lookup(p, ["marca", "brand", "Marca"])
-        modelo = lookup(p, ["modelo", "model", "modeloDoItem", "Model"])
+    for idx, p in enumerate(propostas, 1):
+        try:
+            fornecedor = p.get("participante", {}).get("nome") if isinstance(p, dict) else None
 
-        ws.append([fornecedor, valor, marca, modelo])
+            valores = p.get("valores", {}) if isinstance(p, dict) else {}
+            vpil = valores.get("valorPropostaInicialOuLances", {}) if isinstance(valores, dict) else {}
 
-    caminho = os.path.join(os.getcwd(), filename)
+            valor_informado = None
+            if isinstance(vpil, dict):
+                valor_informado = vpil.get("valorInformado")
+            else:
+                # vpil pode ser float ou outro tipo
+                valor_informado = vpil
+
+            valor_unitario = None
+            if isinstance(valor_informado, dict):
+                valor_unitario = valor_informado.get("valorUnitario")
+            else:
+                valor_unitario = valor_informado
+
+            # Agora valor_unitario pode ser dict ou float
+            valor_total = None
+            if isinstance(valor_unitario, dict):
+                valor_total = valor_unitario.get("valorTotal")
+            else:
+                valor_total = valor_unitario
+
+            marca = p.get("marcaFabricante") if isinstance(p, dict) else None
+            modelo = p.get("modeloVersao") if isinstance(p, dict) else None
+
+            log.info(f"Item {idx}: fornecedor={fornecedor}, valor={valor_total}, marca={marca}, modelo={modelo}")
+
+            ws.append([fornecedor, valor_total, marca, modelo])
+        except Exception as e:
+            log.error(f"Erro no processamento da proposta {idx}: {e}")
+
+    caminho = os.path.abspath(f"{filename}.xlsx")
     wb.save(caminho)
-    info("Excel salvo", path=caminho, rows= len(ws['A'])-1)
+    log.info(f"Excel salvo em {caminho}")
     return caminho

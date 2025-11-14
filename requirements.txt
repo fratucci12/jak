@@ -4,3 +4,11 @@ jinja2
 python-multipart
 openpyxl
 playwright
+fastapi
+uvicorn
+selenium
+selenium-wire
+webdriver-manager
+python-multipart
+requests
+blinker

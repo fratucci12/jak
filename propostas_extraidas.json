@@ -1,0 +1,1151 @@
+{
+  "numero": 1,
+  "tipo": "I",
+  "disputaPorValorUnitario": true,
+  "possuiOrcamentoSigiloso": false,
+  "exigenciaConteudoNacional": false,
+  "identificador": "1",
+  "tipoItemCatalogo": "M",
+  "descricao": "Cadeira Escritório",
+  "criterioJulgamento": "1",
+  "homologado": false,
+  "numeroSessaoJulgHab": 1,
+  "tipoTratamentoDiferenciadoMeEpp": "0",
+  "participacaoExclusivaMeEppOuEquiparadas": false,
+  "utilizaMargemPreferencia": false,
+  "situacao": "1",
+  "fase": "E",
+  "quantidadeSolicitada": 300,
+  "criterioValor": "E",
+  "valorEstimadoUnitario": 2365.0,
+  "valorEstimadoTotal": 709500.0,
+  "possuiDiligenciaFinalizada": false,
+  "julgHabEncerrada": false,
+  "propostasItem": [
+    {
+      "quantidadeOfertada": 300,
+      "descricaoDetalhada": "Cadeira Escritório - Cadeira Escritório Material Estrutura: Liga Aluminio/ Chapa De Aço, Material Revestimento Assento E Encosto: Tecido 100% Poliéster, Material Encosto: Resina Termoplastica E Tela Poliester E Nylon, Material Assento: Resina Termoplastica/ Compensado Multilaminado, Tipo Base: Giratória, Tipo Encosto: Espaldar Alto, Apoio Braço: Com Braços, Cor: Azul",
+      "marcaFabricante": "SIMILAR",
+      "modeloVersao": "SIMILAR",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 1,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 10000000.0,
+          "valorCalculado": {
+            "valorUnitario": 10000000.0,
+            "valorTotal": 3000000000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1207.22,
+          "valorCalculado": {
+            "valorUnitario": 1207.22,
+            "valorTotal": 362166.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "53111650000170",
+        "nome": "GPR SOLUCOES CONSULTIVAS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "DF"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true,
+      "situacaoUltimaSolicitacaoAnexos": "E"
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "CAVALETTI",
+      "modeloVersao": "Polt Girat 42101 AC Syncron Regul Profundidade",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 2,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2315.0,
+          "valorCalculado": {
+            "valorUnitario": 2315.0,
+            "valorTotal": 694500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1213.0,
+          "valorCalculado": {
+            "valorUnitario": 1213.0,
+            "valorTotal": 363900.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "07681838000137",
+        "nome": "G. MOBILI MOBILIARIO CORPORATIVO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "plaxmetal",
+      "modeloVersao": "brizza tela presidente",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 3,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2350.0,
+          "valorCalculado": {
+            "valorUnitario": 2350.0,
+            "valorTotal": 705000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1389.98,
+          "valorCalculado": {
+            "valorUnitario": 1389.98,
+            "valorTotal": 416994.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "31347547000191",
+        "nome": "GRATTOS INDUSTRIA E COMERCIO DE MOVEIS E SERRALHERIA LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RS"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Plametal",
+      "modeloVersao": "Cadeira Flash Presidente",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 4,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1390.0,
+          "valorCalculado": {
+            "valorUnitario": 1390.0,
+            "valorTotal": 417000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "40654670000146",
+        "nome": "RBC REPRESENTACOES LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "TOK/TOK PLAST METAL LTDA",
+      "modeloVersao": "VENEZA 9000 ",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 5,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2353.23,
+          "valorCalculado": {
+            "valorUnitario": 2353.23,
+            "valorTotal": 705969.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1424.99,
+          "valorCalculado": {
+            "valorUnitario": 1424.99,
+            "valorTotal": 427497.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "07875146000120",
+        "nome": "SERRA MOBILE INDUSTRIA E COMERCIO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RS"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "TOK / TOK PLAST METAL ",
+      "modeloVersao": "VENEZA 9000",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 6,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1427.0,
+          "valorCalculado": {
+            "valorUnitario": 1427.0,
+            "valorTotal": 428100.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "29209847000162",
+        "nome": "BELCHAIR COMERCIO DE MOVEIS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RS"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "PLAXMETAL ",
+      "modeloVersao": "DARIX X +",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 7,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1490.0,
+          "valorCalculado": {
+            "valorUnitario": 1490.0,
+            "valorTotal": 447000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "49715569000122",
+        "nome": "FAGUNDES & MIRANDA LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "MG"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Marelli",
+      "modeloVersao": "Active 704",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 8,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 1500.0,
+          "valorCalculado": {
+            "valorUnitario": 1500.0,
+            "valorTotal": 450000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1500.0,
+          "valorCalculado": {
+            "valorUnitario": 1500.0,
+            "valorTotal": 450000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "47460475000124",
+        "nome": "MARCUS WILSON PAIVA LIMA 13321882736",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RJ"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Plaxmetal / Plaxmetal ",
+      "modeloVersao": "Darix X+ / ass estofado Ref: 75000.4.6.1.6.1.1.19",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 9,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2300.0,
+          "valorCalculado": {
+            "valorUnitario": 2300.0,
+            "valorTotal": 690000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1579.0,
+          "valorCalculado": {
+            "valorUnitario": 1579.0,
+            "valorTotal": 473700.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "10747966000140",
+        "nome": "GOLDSTONE OFFICE EQUIPAMENTOS DE ESCRITORIO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "PLAXMETAL",
+      "modeloVersao": "DARIX-X",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 10,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1580.0,
+          "valorCalculado": {
+            "valorUnitario": 1580.0,
+            "valorTotal": 474000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "04927672000106",
+        "nome": "S C & M COMERCIAL DE MATERIAS DE ESCRITORIO E INFORMATICA LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "DF"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "ALFA CADEIRAS",
+      "modeloVersao": "ALFA CADEIRAS",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 11,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1638.0,
+          "valorCalculado": {
+            "valorUnitario": 1638.0,
+            "valorTotal": 491400.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "36513239000102",
+        "nome": "ALFA CADEIRAS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "PLAXMETAL",
+      "modeloVersao": "CADEIRA DARIX X+",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 12,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1689.0,
+          "valorCalculado": {
+            "valorUnitario": 1689.0,
+            "valorTotal": 506700.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "21849320000190",
+        "nome": "ADRIANA CEVE COMERCIO DE PRODUTOS DIVERSOS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "FK GRUPO",
+      "modeloVersao": "ADDIT",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 13,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1690.0,
+          "valorCalculado": {
+            "valorUnitario": 1690.0,
+            "valorTotal": 507000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "37031468000153",
+        "nome": "L SERBENA TEDESCHI COMERCIO DE MOVEIS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "FK Grupo S.A.",
+      "modeloVersao": "KAGI - Giratória Operacional tipo A",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 14,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1730.0,
+          "valorCalculado": {
+            "valorUnitario": 1730.0,
+            "valorTotal": 519000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "55088157001001",
+        "nome": "FK GRUPO S/A",
+        "tipo": "J",
+        "endereco": {
+          "uf": "SP"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "PLAXMETAL",
+      "modeloVersao": "DARIX",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 15,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1749.99,
+          "valorCalculado": {
+            "valorUnitario": 1749.99,
+            "valorTotal": 524997.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "05684135000137",
+        "nome": "VITRINE AMBIENTES PARA ESCRITORIO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RS"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "FLEXFORM",
+      "modeloVersao": "VOLARE",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 16,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 1771.0,
+          "valorCalculado": {
+            "valorUnitario": 1771.0,
+            "valorTotal": 531300.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1771.0,
+          "valorCalculado": {
+            "valorUnitario": 1771.0,
+            "valorTotal": 531300.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "49058654000165",
+        "nome": "FLEXFORM INDUSTRIA E COMERCIO DE MOVEIS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "SP"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Frisokar ",
+      "modeloVersao": "Addit",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 17,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 1890.0,
+          "valorCalculado": {
+            "valorUnitario": 1890.0,
+            "valorTotal": 567000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "28096836000150",
+        "nome": "JANAINA SCARPARI DAMIELSKI DE AZEVEDO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "descricaoDetalhada": "Cadeira Escritório - Cadeira Escritório Material Estrutura: Liga Aluminio/ Chapa De Aço, Material Revestimento Assento E Encosto: Tecido 100% Poliéster, Material Encosto: Resina Termoplastica E Tela Poliester E Nylon, Material Assento: Resina Termoplastica/ Compensado Multilaminado, Tipo Base: Giratória, Tipo Encosto: Espaldar Alto, Apoio Braço: Com Braços, Cor: Azul",
+      "marcaFabricante": "CAVALETTI",
+      "modeloVersao": "RP",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 18,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2039.99,
+          "valorCalculado": {
+            "valorUnitario": 2039.99,
+            "valorTotal": 611997.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "52656563000136",
+        "nome": "ALL CONFIANCE SOLUCOES INTEGRADAS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RJ"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "MARELLI",
+      "modeloVersao": "IMPACT 2657ABS",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 19,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2040.0,
+          "valorCalculado": {
+            "valorUnitario": 2040.0,
+            "valorTotal": 612000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "21433387000140",
+        "nome": "OFFICE FLEX MOBILIARIO CORPORATIVO CURITIBA LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": false
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "frisokar",
+      "modeloVersao": "giratória",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 20,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2040.98,
+          "valorCalculado": {
+            "valorUnitario": 2040.98,
+            "valorTotal": 612294.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "57073962000198",
+        "nome": "OR-TECH PROMOCAO DE VENDAS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "AM"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "MARCA PRÓPRIA",
+      "modeloVersao": "MODELO PRÓPRIO",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 21,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2167.34,
+          "valorCalculado": {
+            "valorUnitario": 2167.34,
+            "valorTotal": 650202.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2054.35,
+          "valorCalculado": {
+            "valorUnitario": 2054.35,
+            "valorTotal": 616305.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "00366257000161",
+        "nome": "CADERODE MOVEIS PARA ESCRITORIO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RS"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "FK/PLAX/RHODES/ROAL/MARTIFLEX/VECTOR",
+      "modeloVersao": "CADEIRA GIRATORIA",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 22,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2601.0,
+          "valorCalculado": {
+            "valorUnitario": 2601.0,
+            "valorTotal": 780300.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2100.0,
+          "valorCalculado": {
+            "valorUnitario": 2100.0,
+            "valorTotal": 630000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "72426141000181",
+        "nome": "FLORIANRIUS COMERCIO & INSTALACOES DE MOVEIS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "RJ"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "FK GRUPO",
+      "modeloVersao": "KAGI ÁGILE",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 23,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2129.0,
+          "valorCalculado": {
+            "valorUnitario": 2129.0,
+            "valorTotal": 638700.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "18493830000163",
+        "nome": "META X INDUSTRIA E COMERCIO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "MG"
+        }
+      },
+      "declaracaoMeEpp": false,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "cav/plex",
+      "modeloVersao": "cadeira",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 24,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 5000.0,
+          "valorCalculado": {
+            "valorUnitario": 5000.0,
+            "valorTotal": 1500000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2177.0,
+          "valorCalculado": {
+            "valorUnitario": 2177.0,
+            "valorTotal": 653100.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "34290686000114",
+        "nome": "ULISSES GUIMARAES ANACLETO LOJA DE VARIEDADES",
+        "tipo": "J",
+        "endereco": {
+          "uf": "MG"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Rhodes",
+      "modeloVersao": "Cadeira ergonômica giratória reclinável",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 25,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2178.17,
+          "valorCalculado": {
+            "valorUnitario": 2178.17,
+            "valorTotal": 653451.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "40919354000159",
+        "nome": "ALPHERFLEX INDUSTRIA E COMERCIO DE MOVEIS E FERRAGENS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "SP"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": false
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "similar ao produto",
+      "modeloVersao": "similar ao produto",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 26,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2200.0,
+          "valorCalculado": {
+            "valorUnitario": 2200.0,
+            "valorTotal": 660000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "40997613000160",
+        "nome": "GSM CONSTRUCOES E COMERCIO LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "GO"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "plaxmetal",
+      "modeloVersao": "plaxmetal",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 27,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2300.0,
+          "valorCalculado": {
+            "valorUnitario": 2300.0,
+            "valorTotal": 690000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2300.0,
+          "valorCalculado": {
+            "valorUnitario": 2300.0,
+            "valorTotal": 690000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "08920924000118",
+        "nome": "BRASIL POLTRONAS E CADEIRAS LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "GO"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": false
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Comfy",
+      "modeloVersao": "Escritório",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 28,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2300.0,
+          "valorCalculado": {
+            "valorUnitario": 2300.0,
+            "valorTotal": 690000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2300.0,
+          "valorCalculado": {
+            "valorUnitario": 2300.0,
+            "valorTotal": 690000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "35794003000129",
+        "nome": "PHM COMERCIO E CONFECCOES LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "SC"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": false
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "mwv",
+      "modeloVersao": "mwv",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 29,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2364.0,
+          "valorCalculado": {
+            "valorUnitario": 2364.0,
+            "valorTotal": 709200.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2364.0,
+          "valorCalculado": {
+            "valorUnitario": 2364.0,
+            "valorTotal": 709200.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "49649839000144",
+        "nome": "MWV DISTRIBUIDORA LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "Alternativo",
+      "modeloVersao": "Conforme TR",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 30,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2364.0,
+          "valorCalculado": {
+            "valorUnitario": 2364.0,
+            "valorTotal": 709200.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2364.0,
+          "valorCalculado": {
+            "valorUnitario": 2364.0,
+            "valorTotal": 709200.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "61751135000183",
+        "nome": "RUAHZ LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "SP"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "EVOLUSOM",
+      "modeloVersao": "C/EDITAL",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 31,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "61198394000129",
+        "nome": "61.198.394 LUIZ TIAGO MOTA DA SILVA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PA"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "PLAX METAL",
+      "modeloVersao": "PLAX METAL",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 32,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2365.0,
+          "valorCalculado": {
+            "valorUnitario": 2365.0,
+            "valorTotal": 709500.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "10939558000190",
+        "nome": "T2D SOLUCOES LTDA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "BA"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "f",
+      "modeloVersao": "f",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 33,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2400.0,
+          "valorCalculado": {
+            "valorUnitario": 2400.0,
+            "valorTotal": 720000.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2400.0,
+          "valorCalculado": {
+            "valorUnitario": 2400.0,
+            "valorTotal": 720000.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "13579783000151",
+        "nome": "MARCELO MOHALLEM",
+        "tipo": "J",
+        "endereco": {
+          "uf": "MG"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    },
+    {
+      "quantidadeOfertada": 300,
+      "marcaFabricante": "bk",
+      "modeloVersao": "escritorio",
+      "declaracaoConteudoNacional": false,
+      "classificacao": 34,
+      "valores": {
+        "valorPropostaInicial": {
+          "valorInformado": 2999.0,
+          "valorCalculado": {
+            "valorUnitario": 2999.0,
+            "valorTotal": 899700.0
+          }
+        },
+        "valorPropostaInicialOuLances": {
+          "valorInformado": 2999.0,
+          "valorCalculado": {
+            "valorUnitario": 2999.0,
+            "valorTotal": 899700.0
+          }
+        }
+      },
+      "participante": {
+        "identificacao": "59845793000192",
+        "nome": "59.845.793 BRUNO KAZEQUER DE SOUZA",
+        "tipo": "J",
+        "endereco": {
+          "uf": "PR"
+        }
+      },
+      "declaracaoMeEpp": true,
+      "declaracaoProgramasIntegridade": true
+    }
+  ]
+}
