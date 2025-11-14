@@ -4,9 +4,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 import uuid, os
-from .extractor import extrair_dados
+from fastapi.concurrency import run_in_threadpool
+from .extractor import scrape_propostas
 from .excel import gerar_excel
 from .logger import info, error
+
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -27,19 +29,20 @@ def home(request: Request):
 @app.post("/processar")
 async def processar(request: Request, url: str = Form(...)):
     info("Recebido request para processar", url=url)
-    data = extrair_dados(url)
+
+    # 👉 roda o scraper síncrono SEGURO dentro do FastAPI
+    data = await run_in_threadpool(scrape_propostas, url)
 
     if not data:
         error("Falha na extração", url=url)
-        return {"error": "Falha ao extrair dados. Veja logs."}
-
-    # Aqui extraia a lista de propostas dentro da chave "propostasItem"
-    propostas = data.get("propostasItem", [])
-
-    info(f"Chaves do JSON recebidas: {list(data.keys())}")
-    info(f"Quantidade de propostas para gerar Excel: {len(propostas)}")
+        return {"error": "Falha ao extrair dados."}
 
     filename = f"propostas_{uuid.uuid4().hex}.xlsx"
-    caminho = gerar_excel(propostas, filename)  # Passa só a lista, não o dict inteiro
+    caminho = gerar_excel(data, filename)
+
     info("Excel gerado", file=caminho)
-    return FileResponse(caminho, filename="resultado.xlsx", media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+    return FileResponse(
+        caminho,
+        filename="resultado.xlsx",
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )

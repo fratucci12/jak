@@ -1,99 +1,53 @@
 import json
+import os
 import time
-import uuid
 from seleniumbase import Driver
+from .logger import info, error
 
 
-def log(level, message, **extra):
-    event = {
-        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "level": level,
-        "message": message,
-        "event_id": str(uuid.uuid4()),
-    }
-    event.update(extra)
-    print(json.dumps(event, ensure_ascii=False))
-
-
-def extrair_dados(url: str):
-    log("INFO", "Iniciando Chrome + CDP", url=url)
-
-    # === INICIAR CHROME COM CDP ATIVADO ===
-    driver = Driver(
-        browser="chrome",
-        headless=True,
-        undetected=True,
-        agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    )
-
-    driver.open(url)
-
-    # ATIVAR LISTEN DE REDE ANTES DE CARREGAR
-    driver.execute_cdp_cmd("Network.enable", {})
-
-    captured = []
-
-    def capturar(request):
-        try:
-            req_url = request.get("request", {}).get("url", "")
-            if "comprasnet-web" in req_url:
-                captured.append(request)
-        except Exception:
-            pass
-
-    driver.add_cdp_listener("Network.requestWillBeSent", capturar)
-
-    log("INFO", "Aguardando chamadas de API")
-
-    # Esperar requisições aparecerem
-    time.sleep(7)
-
-    if not captured:
-        log("ERROR", "Nenhuma requisição capturada! Verifique se a página carregou totalmente")
-        driver.quit()
-        return None
-
-    # === TENTAR IDENTIFICAR O ENDPOINT CERTO ===
-    candidatos = [
-        "propostas",
-        "melhor-proposta",
-        "lances",
-        "melhorLance",
-        "melhorOferta",
-        "cotacoes",
-    ]
-
-    alvo = None
-    for req in captured:
-        url_req = req.get("request", {}).get("url", "")
-        if any(c in url_req.lower() for c in candidatos):
-            alvo = req
-            break
-
-    if not alvo:
-        # DEBUG: Exibir todas as URLs encontradas
-        for req in captured:
-            log("INFO", "REQ DEBUG", url=req.get("request", {}).get("url", ""))
-
-        log("ERROR", "Nenhuma rota de propostas foi encontrada")
-        driver.quit()
-        return None
-
-    log("INFO", "Rota encontrada", rota=alvo["request"]["url"])
-
-    # === OBTER RESPONSE PELO ID ===
-    req_id = alvo["requestId"]
+def scrape_propostas(url: str, timeout=60):
+    info("Iniciando SeleniumBase", url=url)
 
     try:
-        resp = driver.execute_cdp_cmd("Network.getResponseBody", {"requestId": req_id})
-        body = resp.get("body", "")
-        data = json.loads(body)
+        driver = Driver(
+            browser="chrome",
+            uc=True,          # undetected-chromedriver
+            headless=False,    # rode headless se quiser
+        )
+
+        driver.get(url)
+        time.sleep(3)
+
+        end_time = time.time() + timeout
+        while time.time() < end_time:
+            html = driver.page_source
+            if "/propostas" in html:
+                info("/propostas detectado no HTML")
+                break
+            time.sleep(1)
+        else:
+            error("Timeout esperando /propostas")
+            driver.quit()
+            return None
+
+        body = driver.find_element("tag name", "body").text
+
+        driver.quit()
+
+        try:
+            data = json.loads(body)
+        except Exception as e:
+            error("Falha ao parsear JSON", exception=str(e))
+            return None
+
+        filename = "propostas_extraidas.json"
+        caminho = os.path.join(os.getcwd(), filename)
+        with open(caminho, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+
+        info("JSON salvo", path=caminho)
+        return data
 
     except Exception as e:
-        log("ERROR", "Falha ao ler o corpo da resposta", error=str(e))
-        driver.quit()
+        error("Erro durante scraping", exception=str(e))
         return None
-
-    driver.quit()
-    return data
