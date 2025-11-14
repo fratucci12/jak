@@ -3,7 +3,7 @@ from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import uuid, os
-from extractor import scrape_propostas
+from .extractor import scrape_propostas
 from excel import gerar_excel
 from logger import info, error
 
