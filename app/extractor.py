@@ -1,6 +1,6 @@
 import asyncio, json
 from playwright.async_api import async_playwright
-from logger import info, error
+from .logger import info, error
 
 STEALTH_JS = """
 Object.defineProperty(navigator, 'webdriver', {get: () => false});
