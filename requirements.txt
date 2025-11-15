@@ -3,12 +3,10 @@ uvicorn[standard]
 jinja2
 python-multipart
 openpyxl
-playwright
-fastapi
-uvicorn
 selenium
 selenium-wire
-webdriver-manager
-python-multipart
+undetected-chromedriver
 requests
-blinker
+loguru
+python-dotenv
+blinker==1.5
