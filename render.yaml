@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: jak-playwright
+    name: jaka
     env: docker
     repo: https://github.com/fratucci12/jak
     branch: main
